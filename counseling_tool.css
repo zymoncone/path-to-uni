@@ -1,0 +1,36 @@
+#table_title {
+    height: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#my_table {
+    align-content: center;
+}
+
+#student_title {
+    font-weight: bold;
+    font-size: x-large;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5px;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    vertical-align: baseline;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.taipy-button {
+    margin-top: 5px;
+}
