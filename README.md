@@ -25,7 +25,7 @@ Another challenge that we ran into was training the predictive model. As the mod
 ## What we learned
 How to create an interactive GUI within Taipy and more about the four fundamental concepts in Taipy Core.
 
-## What's next for Path To Uni
+## What's next for Uni Path
 We want to find more data to help build up the credibility of the app. But this will take research and most likely going school to school to collect information. This data would encompass a large time range and ideally include the breakdown of the GPA to include the student's academic grades, but also the scores of the SAT sections. If we have that this tool can be really powerful. 
 
 Second, we want this tool to be available for students as well. So a student version of the app to come soon. The student's version would be a tool that could be used for progress tracking and as a study plan to adjust their studies to tailor best to their top universities. 
