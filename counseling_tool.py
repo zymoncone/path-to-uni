@@ -85,7 +85,7 @@ page_1 = """
 
 <|Favorited Universities (+/- compared to {student_names[0]})|id=table_title|>
 
-<|layout|columns=1 1 1|
+<|layout|columns=2 1 1|
 
 <|{student_tables_main[0]}|table|show_all|id=my_table|>
 
@@ -126,7 +126,7 @@ page_2 = """
 
 |>
 
-<|Favorited Universities (+/- compared to {student_names[0]})|id=table_title|>
+<|Favorited Universities (+/- compared to {student_names[1]})|id=table_title|>
 
 <|layout|columns=1 1 1|
 
@@ -169,7 +169,7 @@ page_3 = """
 
 |>
 
-<|Favorited Universities (+/- compared to {student_names[0]})|id=table_title|>
+<|Favorited Universities (+/- compared to {student_names[2]})|id=table_title|>
 
 <|layout|columns=1 1 1|
 
@@ -212,7 +212,7 @@ page_4 = """
 
 |>
 
-<|Favorited Universities (+/- compared to {student_names[0]})|id=table_title|>
+<|Favorited Universities (+/- compared to {student_names[3]})|id=table_title|>
 
 <|layout|columns=1 1 1|
 
@@ -237,7 +237,7 @@ page_4 = """
 
 # root page
 root_md = """
-<|OPEN ADVICE|id=title|>
+<|UNI PATH|id=title|>
 
 <|toggle|theme|>\n<center>\n<|navbar|>\n</center>
 """
