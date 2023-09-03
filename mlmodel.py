@@ -1,5 +1,4 @@
 #For training predictive model, because the dataset collected this model was not fully trained due to lack of time based data.
-
 import pandas as pd
 import taipy as tp
 import numpy as np
