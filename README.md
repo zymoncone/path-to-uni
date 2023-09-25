@@ -1,4 +1,4 @@
-# path-to-uni
+# UniPath
 Part of Hack_The_Classroom competition hosted by MLH. See demo [here](https://vimeo.com/860586728?share=copy)
 
 Sub prizes includes best use of Taipy, hence a heavy use of this Python library
