@@ -1,6 +1,8 @@
 import pandas as pd
+import os
 
-filepath = 'C:/GIT/Hack_The_Classroom/path-to-uni/data/College_Admissions.csv'
+current_dir = os.getcwd()
+filepath = os.path.join(current_dir, 'data', 'College_Admissions.csv')
 
 cols = ['Name', 'Applicants total', 'Admissions total', 'Enrolled total',
        'SAT_Reading_25th_p', 'SAT_Reading_75th_p',

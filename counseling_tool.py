@@ -1,6 +1,7 @@
 from taipy.gui import Gui, notify, navigate, Markdown
 import sys
-sys.path.insert(1,'C:/GIT/Hack_The_Classroom/path-to-uni/data')
+import os
+sys.path.insert(1, os.path.join(os.getcwd(), 'data'))
 import pandas as pd
 from student_data import student_data_df, student_table_dict_SAT_math, student_table_dict_SAT_rw, student_table_dict_main, student_sig_underperforming, student_mildly_underperforming
 
@@ -17,23 +18,23 @@ property_chart_SAT = {"type":"bar",
                       "title":"Predicted Scores"}
 
 # Taipy GUI functions
-def on_button_action(state):
+def on_button_action(state) -> None:
     navigate(state, to=state.student_name.lower().replace(" ","_"))
     notify(state, 'info', f'Data updated for: {state.student_name}')
 
-def on_change(state, var_name, var_value):
+def on_change(state, var_name, var_value) -> None:
     if var_value == False:
         notify(state, 'info', 'Panel closed, re-open with button')
     
-def on_user_init(state):
+def on_user_init(state) -> None:
     notify(state, 'info', f'Data updated for: {state.student_name}')
     return
 
-def table_style(_1, _2, value):
+def table_style(_1, _2, value) -> str:
     # breakpoint()
-    if value[0] > -1:
+    if value.iloc[0] > -1:
         return "green-cell"
-    elif value[0] > -30:
+    elif value.iloc[0] > -30:
         return "yellow-cell"
     else:
         return "red-cell"
@@ -243,13 +244,14 @@ root_md = """
 """
 
 ######################### - RUN APP - #########################
-# create pages
-pages = {"/":root_md,
-         "student_a":page_1,
-         "student_b":page_2,
-         "student_c":page_3,
-         "student_d":page_4}
+if __name__ == "__main__":
+    # create pages
+    pages = {"/":root_md,
+            "student_a":page_1,
+            "student_b":page_2,
+            "student_c":page_3,
+            "student_d":page_4}
 
-# run GUI
-app = Gui(pages=pages,css_file="counseling_tool.css")
-app.run(use_reloader=True) # use_reloader=True for dev mode / reloads on save
+    # run GUI
+    app = Gui(pages=pages, css_file="counseling_tool.css")
+    app.run(use_reloader=True, port=8000) # use_reloader=True for dev mode / reloads on save

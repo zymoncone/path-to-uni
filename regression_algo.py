@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import os
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
@@ -10,7 +11,8 @@ import random
 # clean up data and do random split for math / reading-writing since data not available
 # with more time we could get data from each high school from past few years and make a 
 # collective dataset to use here or other predictive model
-filepath = 'C:/GIT/Hack_The_Classroom/path-to-uni/data/SAT_GPA.csv'
+current_dir = os.getcwd()
+filepath = os.path.join(current_dir, 'data', 'SAT_GPA.csv')
 df = pd.read_csv(filepath)
 df = df[(df!=0).all(1)]
 

@@ -1,5 +1,6 @@
 import sys
-sys.path.insert(1,'C:/GIT/Hack_The_Classroom/path-to-uni')
+import os
+sys.path.insert(1, os.path.join(os.getcwd(), 'path-to-uni'))
 import random
 import pandas as pd
 import numpy as np
@@ -75,10 +76,10 @@ def check_sig_underperforming_students(table,limit=-70):
         # breakpoint()
         Math_list = student_dict['SAT Math']
         RW_list = student_dict['SAT Reading + Writing']
-        print('Math List: ', Math_list)
+        print('Math List: ', Math_list, "\n---\n")
 
-        res_Math = True in (ele < limit for ele in Math_list)
-        res_RW = True in (ele < limit for ele in RW_list)
+        res_Math = any(ele < limit for ele in Math_list)
+        res_RW = any(ele < limit for ele in RW_list)
 
         if res_Math and res_RW:
             text = f'> {student_name} needs help in Math & English'
